@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <h2>Panel de Administración</h2>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showSection('inicio')">Inicio</a></li>
+                    <li><a href="#" onclick="showSection('users')">Gestionar Usuarios</a></li>
+                    <li><a href="#" onclick="showSection('reports')">Ver Reportes</a></li>
+                    <li><a href="#" onclick="logout()">Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <main class="content">
+            <!-- Sección Inicio con iframe para cargar inicio.html -->
+            <section id="inicio" class="section active">
+                <h2>Inicio</h2>
+                <iframe src="inicio.html" frameborder="0" class="iframe-content"></iframe>
+            </section>
+            
+            <section id="users" class="section">
+                <h2>Gestionar Usuarios</h2>
+                <p>Aquí puedes gestionar los usuarios registrados en el sistema.</p>
+            </section>
+            
+            <section id="reports" class="section">
+                <h2>Reportes</h2>
+                <p>En esta sección puedes ver reportes detallados de la actividad del sistema.</p>
+            </section>
+        </main>
+    </div>
+    
+    <script src="admin.js"></script>
+</body>
+</html>
